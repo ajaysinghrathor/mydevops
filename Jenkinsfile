@@ -21,18 +21,16 @@ pipeline {
                 //echo "subscription_id: ${params.subscription_id}"
                 //echo "tenant_id: ${params.tenant_id}"
                 // Execute 'terraform apply' command
-                sh 'terraform plan -var="subscription_id=${params.subscription_id}" -var="tenant_id=${params.tenant_id}"'
+                sh "terraform plan -var='subscription_id=${params.subscription_id}' -var='tenant_id=${params.tenant_id}'"
             }
         }
-    }
-
 
         stage('Terraform Apply') {
             steps {
                 //echo "subscription_id: ${params.subscription_id}"
                 //echo "tenant_id: ${params.tenant_id}"
                 // Execute 'terraform apply' command
-                sh 'terraform apply -auto-approve -var="subscription_id=${params.subscription_id}" -var="tenant_id=${params.tenant_id}"'
+                sh "terraform plan -var='subscription_id=${params.subscription_id}' -var='tenant_id=${params.tenant_id}'"
             }
         }
     }
