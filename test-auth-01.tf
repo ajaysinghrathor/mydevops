@@ -11,6 +11,10 @@ provider "azurerm" {
   features {}
   #subscription_id = "${var.subscription_id}"
   #tenant_id       = "${var.tenant_id}"
+  client_id       = "e2f8b4d3-f523-4358-b597-1064c8775f3c"
+  client_secret   = "P~J8Q~FcgP3Tg3dGCYKpKXtIBpnqUzvrGF3xpasb"
+  tenant_id       = "b16823b4-5880-4613-825f-ccaaee494583"
+  subscription_id = "cd122e53-f5a4-4a5e-9804-0d2748a867b4"
 }
 
 resource "azurerm_resource_group" "rg_sap_001" {
