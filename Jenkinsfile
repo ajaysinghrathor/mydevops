@@ -1,7 +1,14 @@
 pipeline {
     agent any
     
-        
+    stages {
+/**        stage('Checkout') {
+            steps {
+                // Checkout your repository
+                git 'https://github.com/ajaysinghrathor/mydevops.git'
+            }
+        }
+**/        
         stage('Terraform Init') {
             steps {
                 // Execute 'terraform init' command
@@ -16,5 +23,4 @@ pipeline {
             }
         }
     }
-    
 }
