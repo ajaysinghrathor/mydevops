@@ -25,5 +25,5 @@ pipeline {
                 sh "terraform apply -var='client_id=${params.client_id}' -var='client_secret=${params.client_secret}' -var='subscription_id=${params.subscription_id}' -var='tenant_id=${params.tenant_id}'"
             }
         }
-    }
+    
 }
