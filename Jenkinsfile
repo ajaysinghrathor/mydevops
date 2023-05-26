@@ -13,7 +13,8 @@ pipeline {
                 //echo "subscription_id: ${params.subscription_id}"
                 //echo "tenant_id: ${params.tenant_id}"
                 // Execute 'terraform apply' command
-                sh "terraform plan -var='client_id=${params.client_id}' -var='client_secret=${params.client_secret}' -var='subscription_id=${params.subscription_id}' -var='tenant_id=${params.tenant_id}'"
+                #sh "terraform plan -var='client_id=${params.client_id}' -var='client_secret=${params.client_secret}' -var='subscription_id=${params.subscription_id}' -var='tenant_id=${params.tenant_id}'"
+                sh 'terrafom plan'
             }
         }
 
@@ -22,10 +23,11 @@ pipeline {
                 //echo "subscription_id: ${params.subscription_id}"
                 //echo "tenant_id: ${params.tenant_id}"
                 // Execute 'terraform apply' command
-                sh "terraform apply -var='client_id=${params.client_id}' -var='client_secret=${params.client_secret}' -var='subscription_id=${params.subscription_id}' -var='tenant_id=${params.tenant_id}'"
+                //sh "terraform apply -var='client_id=${params.client_id}' -var='client_secret=${params.client_secret}' -var='subscription_id=${params.subscription_id}' -var='tenant_id=${params.tenant_id}'"
+                sh 'terraform apply -auto-approve'
             }
         }
 
-        
+
     }//stages    
 }//pipeline

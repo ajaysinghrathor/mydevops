@@ -21,7 +21,7 @@ variable "azurerm_network_security_group" {
   }
 
 }
-
+/*
 variable "subscription_id" {
   
 }
@@ -37,6 +37,6 @@ variable "client_id" {
 variable "client_secret" {
   
 }
-
+*/
 
 
