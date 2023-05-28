@@ -1,5 +1,4 @@
 data "azurerm_client_config" "azure-cli-2023-05-26-17-40-23" {
-    id = "azure-cli-2023-05-26-17-40-23"
 }
 
 data "azurerm_subscription" "primary" {
