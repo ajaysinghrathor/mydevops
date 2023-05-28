@@ -9,7 +9,7 @@ resource "azuread_user" "startstopserver" {
 
 resource "azurerm_role_definition" "startstopwebserver" {
     name = "startstopwebserver"
-    role_definition_id = "00000000-0000-0000-0000-000000000000"
+    #role_definition_id = "00000000-0000-0000-0000-000000000000"
 
     scope = data.azurerm_subscription.primary.id
 
